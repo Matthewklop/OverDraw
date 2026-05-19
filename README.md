@@ -1,70 +1,50 @@
-# 🔴 OVERDRAW
+# 🔴 OverDraw
 
-## DRAW ON YOUR SCREEN. LIKE A GOD.
-
-**No windows. No borders. No bullshit. Just a red marker that answers to you.**
-
-Your desktop is a canvas. Click. Drag. **Create.**
+**Draw on your screen. Like a god. No compilation. No terminal. Just draw.**
 
 ---
 
-### 🎮 CONTROLS
+## 🪟 Windows
 
-| What | How |
-|------|-----|
-| **DRAW** | Left-click + drag |
-| **ERASE** | Right-click + drag |
-| **🟥 RED** | Press `R` |
-| **🟦 BLUE** | Press `B` |
-| **🟩 GREEN** | Press `G` |
-| **🟨 YELLOW** | Press `Y` |
-| **🧹 CLEAR** | Press `C` |
-| **🚪 QUIT** | Press `Esc` |
+1. Download **`OverDraw.exe`** from [Releases](https://github.com/Matthewklop/OverDraw/releases)
+2. Double-click it
+3. **Draw**
 
----
+## 🐧 Linux
 
-### ⚡ ONE COMMAND
+1. Download **`overdraw`** from [Releases](https://github.com/Matthewklop/OverDraw/releases)
+2. Right-click → Properties → Permissions → **Allow executing as program**
+3. Double-click → **Run**
+4. **Draw**
 
+Or terminal one-liner:
 ```bash
-gcc overdraw.c -lX11 -o overdraw && ./overdraw
+curl -L https://github.com/Matthewklop/OverDraw/releases/download/v1.0/overdraw -o overdraw && chmod +x overdraw && ./overdraw
 ```
 
-That's it. You're drawing.
-
----
-
-### 🧠 HOW IT WORKS
-
-1. Takes a screenshot of your desktop
-2. Creates a fullscreen overlay window with that screenshot as its background
-3. You draw on top
-4. Right-click erases by restoring the original pixels underneath
-5. Override-redirect keeps it above **everything** — yes, above your GNOME panel, above your windows, above your dignity
-
-No toolkit. No framework. No Electron garbage. **Pure X11. Pure C. Pure will.**
-
----
-
-### 🔧 DEPENDENCIES
-
-- A C compiler (`gcc`)
-- X11 development headers (`libx11-dev`)
-- A soul
-
----
-
-### 📦 BUILD
+## 🍎 macOS
 
 ```bash
-gcc overdraw.c -lX11 -o overdraw
+gcc overdraw_mac.c -o overdraw -framework Cocoa -framework CoreGraphics && ./overdraw
 ```
-
-Or don't. The binary is included. Just `./overdraw`.
+(Working on a prebuilt binary — Apple makes this painful)
 
 ---
 
-### 🏆 WHY OVERDRAW
+## 🎮 Controls
 
-Because sometimes you need to draw a red circle around something and the universe isn't fast enough. Because screen annotation tools are bloated. Because you wanted to draw on your desktop and every solution sucked so you built your own.
+| Button | Action |
+|--------|--------|
+| 🖱 Left-drag | Draw |
+| 🖱 Right-drag | Erase |
+| ⌨ R / B / G / Y | Color |
+| ⌨ C | Clear |
+| ⌨ Esc | Quit |
 
-**OverDraw. Draw over everything.**
+---
+
+## 📦 Downloads
+
+👉 **[github.com/Matthewklop/OverDraw/releases](https://github.com/Matthewklop/OverDraw/releases)**
+
+Prebuilt binaries for Linux and Windows. macOS coming soon.
