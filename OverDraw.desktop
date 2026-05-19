@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=OverDraw
+Comment=Draw on your desktop
+Exec=/home/u/Desktop/overdraw
+Icon=/home/u/Desktop/overdraw.png
+Terminal=false
+Type=Application
+Categories=Graphics;
